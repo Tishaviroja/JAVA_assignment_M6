@@ -1,0 +1,67 @@
+
+//Create a program that demonstrates object serialization and deserialization.
+
+package com.assignment;
+import java.io.*;
+
+//Book class must implement Serializable interface
+class Book implements Serializable {
+ private static final long serialVersionUID = 1L; // Ensures compatibility
+ private String title;
+ private String author;
+ private double price;
+
+ // Constructor
+ public Book(String title, String author, double price) {
+     this.title = title;
+     this.author = author;
+     this.price = price;
+ }
+
+ // Display method
+ public void display() {
+     System.out.println("Book Title: " + title + ", Author: " + author + ", Price: $" + price);
+ }
+}
+
+public class Serialization {
+ public static void main(String[] args) {
+     String filename = "book.ser"; // File to store serialized object
+
+     // Creating a Book object
+     Book book1 = new Book("The Alchemist", "Paulo Coelho", 15.99);
+
+     // Serialization (Saving object to file)
+     serializeBook(book1, filename);
+
+     // Deserialization (Reading object from file)
+     Book deserializedBook = deserializeBook(filename);
+
+     // Displaying deserialized object
+     if (deserializedBook != null) {
+         System.out.println("Deserialized Book:");
+         deserializedBook.display();
+     }
+ }
+
+ // Method to serialize a Book object
+ public static void serializeBook(Book book, String filename) {
+     try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename))) {
+         out.writeObject(book);
+         System.out.println("Book object serialized successfully.");
+     } catch (IOException e) {
+         System.out.println("Error during serialization: " + e.getMessage());
+     }
+ }
+
+ // Method to deserialize a Book object
+public static Book deserializeBook(String filename) {
+    try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename))) {
+        return (Book) in.readObject();
+    } catch (IOException | ClassNotFoundException e) {
+        System.out.println("Error during deserialization: " + e.getMessage());
+        return null;
+    }
+}
+}
+

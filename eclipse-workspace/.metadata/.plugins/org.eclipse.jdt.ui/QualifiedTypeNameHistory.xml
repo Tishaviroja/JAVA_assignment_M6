@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="com.pk1.Car"/>
+    <fullyQualifiedTypeName name="com.pk2.car"/>
+    <fullyQualifiedTypeName name="com.oops.scannerDemo"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.nio.file.attribute.AclEntry"/>
+    <fullyQualifiedTypeName name="java.lang.classfile.CodeBuilder.CatchBuilder"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="com.io.serializableDemo"/>
+    <fullyQualifiedTypeName name="com.io.Address"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="com.io.DeserializedDemo"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="java.util.Vector"/>
+    <fullyQualifiedTypeName name="java.util.Enumeration"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.collection.GenericDemo2"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="com.assignment.Calculatore"/>
+    <fullyQualifiedTypeName name="com.assignment.Student"/>
+    <fullyQualifiedTypeName name="com.assignment.MethodOverloading"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.assignment.Static"/>
+    <fullyQualifiedTypeName name="com.assignment.SingleInheritance.teacher"/>
+    <fullyQualifiedTypeName name="com.assignment.MultilevelInheritance.principal"/>
+    <fullyQualifiedTypeName name="com.assignment.MethodOverriding"/>
+    <fullyQualifiedTypeName name="com.assignment.MethodOverriding.Cow"/>
+    <fullyQualifiedTypeName name="com.assignment.MethodOverriding.WeekDays"/>
+    <fullyQualifiedTypeName name="com.assign.payment.StripePaymentGateway.CheckoutService"/>
+    <fullyQualifiedTypeName name="com.mypackage1.MyClass1"/>
+    <fullyQualifiedTypeName name="com.assignment.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+</qualifiedTypeNameHistroy>

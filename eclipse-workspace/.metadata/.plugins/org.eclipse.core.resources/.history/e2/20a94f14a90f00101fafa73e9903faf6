@@ -1,0 +1,22 @@
+
+//Implement a program using HashSet to remove duplicate elements from a list.
+
+package com.assignment;
+import java.util.*;
+
+public class Hasset {
+	 public static void main(String[] args) {
+	        // Creating a list with duplicate elements
+	        List<String> items = Arrays.asList("Apple", "Banana", "Apple", "Orange", "Banana", "Grapes");
+
+	        // Using HashSet to remove duplicates
+	        Set<String> uniqueItems = new HashSet<>(items);
+
+	        // Converting back to a list (if needed)
+	        List<String> resultList = new ArrayList<>(uniqueItems);
+
+	        // Display results
+	        System.out.println("Original List: " + items);
+	        System.out.println("List after removing duplicates: " + resultList);
+	    }
+}

@@ -1,0 +1,40 @@
+
+//Create a HashMap to store and retrieve key-value pairs.
+
+package com.assignment;
+import java.util.HashMap;
+import java.util.Map;
+
+public class Hasmap
+{
+	
+	public static void main(String[] args) {
+        // Creating a HashMap to store country names and their capitals
+        HashMap<String, String> countryCapitals = new HashMap<>();
+
+        // Adding key-value pairs
+        countryCapitals.put("USA", "Washington D.C.");
+        countryCapitals.put("India", "New Delhi");
+        countryCapitals.put("France", "Paris");
+        countryCapitals.put("Japan", "Tokyo");
+
+        // Retrieving a value using a key
+        String capital = countryCapitals.get("India");
+        System.out.println("Capital of India: " + capital);
+
+        // Checking if a key exists
+        if (countryCapitals.containsKey("Japan")) {
+            System.out.println("Japan is in the map.");
+        }
+
+        // Iterating over the HashMap
+        System.out.println("\nCountry - Capital List:");
+        for (Map.Entry<String, String> entry : countryCapitals.entrySet()) {
+            System.out.println(entry.getKey() + " -> " + entry.getValue());
+        }
+
+        // Removing a key-value pair
+        countryCapitals.remove("France");
+        System.out.println("\nAfter Removing France: " + countryCapitals);
+    }
+}

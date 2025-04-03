@@ -1,0 +1,13 @@
+
+//Write a program to create and initialize an object using a parameterized constructor.
+
+package com.assignment;
+
+public class ParameterizedConstructor 
+{
+	public static void main(String[] args) 
+	{
+			
+	}
+
+}

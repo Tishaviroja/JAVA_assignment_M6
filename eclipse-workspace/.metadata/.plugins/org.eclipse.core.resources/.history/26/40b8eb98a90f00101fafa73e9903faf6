@@ -1,0 +1,34 @@
+
+//Write a program to read input from the console using Scanner
+
+package com.assignment;
+
+import java.util.Scanner;
+
+public class Scanner {
+    public static void main(String[] args) {
+        // Creating a Scanner object to read input
+        Scanner scanner = new Scanner(System.in);
+
+        // Reading a string input
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        // Reading an integer input
+        System.out.print("Enter your age: ");
+        int age = scanner.nextInt();
+
+        // Reading a double input
+        System.out.print("Enter your salary: ");
+        double salary = scanner.nextDouble();
+
+        // Displaying the input values
+        System.out.println("\nYour Details:");
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Salary: $" + salary);
+
+        // Closing the scanner
+        scanner.close();
+    }
+}

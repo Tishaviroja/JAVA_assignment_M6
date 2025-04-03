@@ -1,0 +1,58 @@
+
+// Implement runtime polymorphism by overriding methods in the child class
+
+ppackage com.assignment;
+
+//Parent class
+class Shape {
+ // Method to be overridden
+ void draw() {
+     System.out.println("Drawing a shape...");
+ }
+}
+
+//Child class 1 - Circle
+class Circle extends Shape {
+ // Overriding draw() method
+ @Override
+ void draw() {
+     System.out.println("Drawing a Circle");
+ }
+}
+
+//Child class 2 - Rectangle
+class Rectangle extends Shape {
+ // Overriding draw() method
+ @Override
+ void draw() {
+     System.out.println("Drawing a Rectangle");
+ }
+}
+
+//Child class 3 - Triangle
+class Triangle extends Shape {
+ // Overriding draw() method
+ @Override
+ void draw() {
+     System.out.println("Drawing a Triangle");
+ }
+}
+
+//Main class to demonstrate runtime polymorphism
+public class PolymorphismByOverriding
+{
+ public static void main(String[] args)
+ {
+     // Creating a Shape reference
+     Shape myShape;
+
+     // Assigning a Circle object to Shape reference
+     myShape = new Circle();
+     myShape.draw(); // Calls Circle's overridden method
+
+     // Assigning a Rectangle object to Shape reference
+     myShape = new Rectangle();
+     myShape.draw(); // Calls Rectangle's overridden method
+
+     // Assign
+

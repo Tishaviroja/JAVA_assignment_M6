@@ -1,0 +1,19 @@
+
+//Create a user-defined package and import it into another program
+
+package com.assignment;
+
+package mypackage;
+
+public class MyClass {
+    public void displayMessage() {
+        System.out.println("Hello from MyClass in mypackage!");
+    }
+}
+
+
+public class userDefinnePackage
+{
+	
+
+}

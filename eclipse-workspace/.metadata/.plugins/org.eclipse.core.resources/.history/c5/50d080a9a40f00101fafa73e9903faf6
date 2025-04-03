@@ -1,0 +1,71 @@
+
+//Implement an interface for a real-world example,such as a payment gateway.
+
+package com.assign;
+
+import java.awt.Paint;
+import java.awt.PaintContext;
+import java.awt.Rectangle;
+import java.awt.RenderingHints;
+import java.awt.geom.AffineTransform;
+import java.awt.geom.Rectangle2D;
+import java.awt.image.ColorModel;
+
+class  payment
+{
+    boolean processPayment(double amount) {
+		return false;
+	}
+
+public class StripePaymentGateway implements Paint
+{
+    public boolean processPayment(double amount) {
+		return false;
+        // Integrate with Stripe's API to process the payment
+        // Return true if payment is successful, false otherwise
+    }
+
+	@Override
+	public int getTransparency() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public PaintContext createContext(ColorModel cm, Rectangle deviceBounds, Rectangle2D userBounds,
+			AffineTransform xform, RenderingHints hints) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+public class CheckoutService<Payment> {
+    private Payment payment;
+
+    public CheckoutService(Payment paymentGateway) {
+        this.payment = paymentGateway;
+    }
+
+    public boolean checkout(double amount) {
+        return ((com.assign.payment) payment).processPayment(amount);
+    }
+}
+}}
+public class Interface 
+{
+	    private static final String payment = null;
+		private Object paymentGateway;
+	    CheckoutService checkoutService = new CheckoutService(paymentGateway);
+
+	        double amount = 100.00;
+	        boolean paymentStatus = checkoutService.checkout(amount);
+
+	        if (paymentStatus) {
+	            System.out.println("Payment processed successfully.");
+	        } else {
+	            System.out.println("Payment processing failed.");
+	        }
+	    }
+	}
+
+
+

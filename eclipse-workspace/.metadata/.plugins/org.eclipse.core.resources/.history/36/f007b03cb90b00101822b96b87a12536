@@ -1,0 +1,69 @@
+
+//Write a program that demonstrates inheritance using extends keyword
+
+package com.assignment;
+
+// Parent class
+class Vehicle {
+    String brand;
+
+    // Constructor
+    public Vehicle(String brand) {
+        this.brand = brand;
+    }
+
+    // Method to display vehicle details
+    void showDetails() {
+        System.out.println("Vehicle Brand: " + brand);
+    }
+}
+
+// Child class 1 (Motor) inherits from Vehicle
+class Motor extends Vehicle {
+    int speed;
+
+    // Constructor
+    public Motor(String brand, int speed) {
+        super(brand); 
+        this.speed = speed;
+    }
+
+    // Overriding method
+    @Override
+    void showDetails() {
+        System.out.println("Motor Brand: " + brand + ", Speed: " + speed + " km/h");
+    }
+}
+
+// Child class 2 (Bike) inherits from Vehicle
+class Bike extends Vehicle {
+    int mileage;
+
+    // Constructor
+    public Bike(String brand, int mileage) {
+        super(brand); 
+        this.mileage = mileage;
+    }
+
+    // Overriding method
+    @Override
+    void showDetails() {
+        System.out.println("Bike Brand: " + brand + ", Mileage: " + mileage + " km/l");
+    }
+}
+
+// Main class
+public class Inheritance {
+    public static void main(String[] args) {
+        // Creating Motor object
+        Motor myMotor = new Motor("Toyota", 180);
+        myMotor.showDetails();
+
+        // Creating Bike object
+        Bike myBike = new Bike("Honda", 45);
+        myBike.showDetails();
+    }
+}
+
+
+

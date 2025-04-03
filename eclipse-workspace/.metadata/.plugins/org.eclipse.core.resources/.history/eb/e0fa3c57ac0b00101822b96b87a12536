@@ -1,0 +1,58 @@
+
+//Write a program to perform matrix addition and subtraction using 2D arrays.
+
+package com.assignment;
+
+import java.util.Scanner;
+
+public class twodaimentionalarray 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		
+		System.out.println("Enter number of rows:");
+		int rows=sc.nextInt();
+		
+		System.out.println("Enter number of column:");
+		int cols=sc.nextInt();
+		
+		int[][] matrix1=new int[rows][cols];
+		int[][] matrix2=new int[rows][cols];
+		int[][] summatrix=new int[rows][cols];
+		int[][] diffmatrix=new int[rows][cols];
+		
+		System.out.println("Enter element for first metrix :");
+		for(int i=0; i<rows; i++)
+		{
+			for(int j=0; j<cols; j++)
+			{
+				matrix1[i][j]=sc.nextInt();
+			}
+		}
+		
+		System.out.println("Enter element for second metrix :");
+		for(int i=0; i<rows; i++)
+		{
+			for(int j=0; j<cols; j++)
+			{
+				matrix2[i][j]=sc.nextInt();
+			}
+		}
+		
+		
+		for(int i=0; i<rows; i++)
+		{
+			for(int j=0; j<cols; j++)
+			{
+				summatrix[i][j]=matrix1[i][j]+matrix2[i][j];
+				summatrix[i][j]=matrix1[i][j]-matrix2[i][j];
+			}
+		}
+		
+		
+		
+		
+	}
+	
+}

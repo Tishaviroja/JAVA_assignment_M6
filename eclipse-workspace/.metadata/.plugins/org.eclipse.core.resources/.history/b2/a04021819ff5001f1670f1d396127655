@@ -1,0 +1,21 @@
+package com.oops;
+
+import java.util.Scanner;
+
+public class prime_num 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println(" Enter Any No:");
+		int num=sc.nextInt();
+		for(int i=2; i<=50; i++)
+		{
+			num=num/1;
+		
+			
+			
+		}
+		System.out.println("prime number is......"num);
+	}
+}

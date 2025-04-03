@@ -1,0 +1,14 @@
+package com.common;
+
+import java.util.Scanner;
+
+public class String1 
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter any string :");
+	String s=sc.toString();
+	
+	system.out.println("string is.."+s);
+	
+	
+}

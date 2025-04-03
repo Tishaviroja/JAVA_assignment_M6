@@ -1,0 +1,53 @@
+
+//Create a class hierarchy and demonstrate multilevel inheritance.
+
+package com.assignment;
+
+public class MultilevelInheritance 
+{
+	class person
+	{
+		String pname="Tisha";
+		int age=19;
+		
+		public void displayperson()
+		{
+			System.out.println("person name is"+pname);
+			System.out.println("person age is"+age);	
+		}
+	}
+	
+	class Trainer extends person
+	{
+		String tname="Chinmyee mam";
+		String subject="SE";
+		
+		public void displaytrainer()
+		{
+			System.out.println("trainer name is"+tname);
+			System.out.println("trainer subject is"+subject);	
+		}
+		
+	}
+	class Principal extends Trainer
+	{
+		String priname="Rahul sir";
+		String techname="Tops Technologies";
+		
+		public void displayprincipal()
+		{
+			System.out.println("principal name is"+priname);
+			System.out.println("technologie name is"+techname);	
+		}
+	}
+	public static void main(String[] args) 
+	{
+		Principal p=new Principal();
+		p.displayperson();
+		p.displaytrainer();
+		p.displayprincipal();
+		
+		
+	}
+
+}

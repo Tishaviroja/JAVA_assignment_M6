@@ -1,0 +1,40 @@
+
+//Create a class with static variables and methods to demonstrate their use.
+
+package com.assignment;
+
+import com.key.StaticDemo;
+
+public class Static 
+{
+	  static int count = 0;
+
+	 
+	    static void displayCount() 
+	    {
+	        System.out.println("Current Count: " + count);
+	    }
+
+	    
+	    Static() 
+	    {
+	        count++; 
+	    }
+
+	    public static void main(String[] args) 
+	    {
+	        // Creating objects
+	        StaticDemo obj1 = new StaticDemo();
+	        StaticDemo obj2 = new StaticDemo();
+	        StaticDemo obj3 = new StaticDemo();
+
+	        // Calling static method without an object
+	        StaticDemo.displayCount();
+		
+		
+		
+		
+		
+	}
+
+}

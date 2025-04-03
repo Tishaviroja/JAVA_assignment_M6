@@ -1,0 +1,47 @@
+
+//Use the super keyword to call the parent class constructor and methods.
+
+package com.assignment;
+
+// Parent class
+class Building {
+    String name;
+
+    // Parent class constructor
+    Building(String name) {
+        this.name = name;
+        System.out.println("Building constructor called for: " + name);
+    }
+
+    // Parent class method
+    void displayInfo() {
+        System.out.println("Building Name: " + name);
+    }
+}
+
+// Child class
+class House extends Building {
+    int numberOfRooms;
+
+    // Child class constructor
+    House(String name, int numberOfRooms) {
+        super(name); // Calls the parent class constructor
+        this.numberOfRooms = numberOfRooms;
+        System.out.println("House constructor called for: " + name + " with " + numberOfRooms + " rooms");
+    }
+
+    // Overriding the method
+    @Override
+    void displayInfo() {
+        super.displayInfo(); // Calls the parent class method
+        System.out.println("Number of Rooms: " + numberOfRooms);
+    }
+}
+
+// Main class
+public class SuperKeyworld { // Class name should match the filename
+    public static void main(String[] args) {
+        House myHouse = new House("Dream Home", 5);
+        myHouse.displayInfo(); // Call method to display info
+    }
+}

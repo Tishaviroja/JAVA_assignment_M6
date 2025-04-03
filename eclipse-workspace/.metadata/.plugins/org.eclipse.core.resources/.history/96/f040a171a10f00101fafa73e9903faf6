@@ -1,0 +1,12 @@
+package com.mypackage1;
+
+public class MyClass1 
+{
+	public static String name;
+	public static String email;
+	
+	public void display(String n, String e)
+	{
+		System.out.println(name + " : " + email);
+	}
+}

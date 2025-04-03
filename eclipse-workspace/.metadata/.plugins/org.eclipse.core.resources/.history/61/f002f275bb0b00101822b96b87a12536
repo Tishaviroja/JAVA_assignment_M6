@@ -1,0 +1,47 @@
+
+//Create an abstract class and implement its methods in a subclass.
+
+package com.assignment;
+
+// Abstract class
+abstract class Appliance {
+    String brand;
+
+    // Constructor for the abstract class
+    Appliance(String brand) {
+        this.brand = brand;
+    }
+
+    // Abstract method (must be implemented by subclasses)
+    abstract void turnOn();
+
+    // Concrete method
+    void showBrand() {
+        System.out.println("Appliance Brand: " + brand);
+    }
+}
+
+// Concrete subclass
+class WashingMachine extends Appliance {
+
+    // Constructor
+    WashingMachine(String brand) {
+        super(brand); // Calls parent class constructor
+    }
+
+    // Implementing the abstract method
+    @Override
+    void turnOn() {
+        System.out.println(brand + " Washing Machine is now ON.");
+    }
+}
+
+// Main class
+public class AbstracDemo { // Ensure the filename matches this class
+    public static void main(String[] args) {
+        WashingMachine wm = new WashingMachine("Samsung");
+        wm.showBrand(); // Calls concrete method from abstract class
+        wm.turnOn();    // Calls implemented abstract method
+    }
+}
+

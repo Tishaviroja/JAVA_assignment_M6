@@ -1,0 +1,7 @@
+package com.mypackage1;
+
+public class MyClass1 
+{
+	String name;
+	String email;
+}

@@ -1,0 +1,48 @@
+
+//Write a program that demonstrates the use of an ArrayList and LinkedList
+
+package com.assignment;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+
+public class ArrayListLinkedList {
+    public static void main(String[] args) {
+        // Using ArrayList
+        List<String> arrayList = new ArrayList<>();
+        arrayList.add("Apple");
+        arrayList.add("Banana");
+        arrayList.add("Cherry");
+        System.out.println("ArrayList Elements: " + arrayList);
+
+        // Removing an element
+        arrayList.remove("Banana");
+        System.out.println("After Removing 'Banana': " + arrayList);
+
+        // Iterating over ArrayList
+        System.out.println("Iterating over ArrayList:");
+        for (String fruit : arrayList) {
+            System.out.println(fruit);
+        }
+
+        System.out.println("-------------------------------");
+
+        // Using LinkedList
+        List<String> linkedList = new LinkedList<>();
+        linkedList.add("Dog");
+        linkedList.add("Cat");
+        linkedList.add("Rabbit");
+        System.out.println("LinkedList Elements: " + linkedList);
+
+        // Removing an element
+        linkedList.remove("Cat");
+        System.out.println("After Removing 'Cat': " + linkedList);
+
+        // Iterating over LinkedList
+        System.out.println("Iterating over LinkedList:");
+        for (String animal : linkedList) {
+            System.out.println(animal);
+        }
+    }
+}
+

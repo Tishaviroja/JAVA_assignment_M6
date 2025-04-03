@@ -1,0 +1,64 @@
+
+//Create a program that demonstrates object serialization and deserialization.
+
+package com.assignment;
+import java.io.*;
+
+//Employee class must implement Serializable interface
+class Employee implements Serializable {
+ private static final long serialVersionUID = 1L; // Ensures compatibility
+ private String name;
+ private double salary;
+
+ // Constructor
+ public Employee(String name, double salary) {
+     this.name = name;
+     this.salary = salary;
+ }
+
+ // Display method
+ public void display() {
+     System.out.println("Employee Name: " + name + ", Salary: $" + salary);
+ }
+}
+
+public class EmployeeSerializationDemo {
+ public static void main(String[] args) {
+     String filename = "employee.ser"; // File to store serialized object
+
+     // Creating an Employee object
+     Employee emp1 = new Employee("Alice Johnson", 75000.50);
+
+     // Serialization (Saving object to file)
+     serializeEmployee(emp1, filename);
+
+     // Deserialization (Reading object from file)
+     Employee deserializedEmployee = deserializeEmployee(filename);
+
+     // Displaying deserialized object
+     if (deserializedEmployee != null) {
+         System.out.println("Deserialized Employee:");
+         deserializedEmployee.display();
+     }
+ }
+
+ // Method to serialize an Employee object
+ public static void serializeEmployee(Employee employee, String filename) {
+     try (ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(filename))) {
+         out.writeObject(employee);
+         System.out.println("Employee object serialized successfully.");
+     } catch (IOException e) {
+         System.out.println("Error during serialization: " + e.getMessage());
+     }
+ }
+
+ // Method to deserialize an Employee object
+ public static Employee deserializeEmployee(String filename) {
+     try (ObjectInputStream in = new ObjectInputStream(new FileInputStream(filename))) {
+         return (Employee) in.readObject();
+     } catch (IOException | ClassNotFoundException e) {
+         System.out.println("Error during deserialization: " + e.getMessage());
+         return null;
+     }
+ }
+}

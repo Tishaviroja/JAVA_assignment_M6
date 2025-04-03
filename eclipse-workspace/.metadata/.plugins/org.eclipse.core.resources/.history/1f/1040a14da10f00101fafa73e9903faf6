@@ -1,0 +1,8 @@
+package com.mypackage2;
+
+import com.mypackage1.MyClass1;
+
+public class MyClass2 
+{
+	MyClass1 m = new MyClass1();
+}

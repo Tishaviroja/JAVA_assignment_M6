@@ -1,0 +1,95 @@
+
+//Use inter-thread communication methods like wait(), notify(), and
+//notifyAll().
+
+package com.assignment;
+
+//Shared resource class
+class SharedResource {
+ private int data;
+ private boolean hasData = false;
+
+ // Method for producer to produce data
+ public synchronized void produce(int value) {
+     while (hasData) {
+         try {
+             wait(); // Wait if data is already available
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+     }
+     this.data = value;
+     hasData = true;
+     System.out.println("Produced: " + data);
+     notify(); // Notify consumer thread
+ }
+
+ // Method for consumer to consume data
+ public synchronized void consume() {
+     while (!hasData) {
+         try {
+             wait(); // Wait if no data is available
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+     }
+     System.out.println("Consumed: " + data);
+     hasData = false;
+     notify(); // Notify producer thread
+ }
+}
+
+//Producer thread
+class Producer extends Thread {
+ private SharedResource resource;
+
+ public Producer(SharedResource resource) {
+     this.resource = resource;
+ }
+
+ @Override
+ public void run() {
+     for (int i = 1; i <= 5; i++) {
+         resource.produce(i);
+         try {
+             Thread.sleep(500); // Simulate processing delay
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+     }
+ }
+}
+
+//Consumer thread
+class Consumer extends Thread {
+ private SharedResource resource;
+
+ public Consumer(SharedResource resource) {
+     this.resource = resource;
+ }
+
+ @Override
+ public void run() {
+     for (int i = 1; i <= 5; i++) {
+         resource.consume();
+         try {
+             Thread.sleep(1000); // Simulate processing delay
+         } catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+     }
+ }
+}
+
+//Main class
+public class CommunicationMethod {
+ public static void main(String[] args) {
+     SharedResource resource = new SharedResource();
+
+     Producer producer = new Producer(resource);
+     Consumer consumer = new Consumer(resource);
+
+     producer.start();
+     consumer.start();
+ }
+}

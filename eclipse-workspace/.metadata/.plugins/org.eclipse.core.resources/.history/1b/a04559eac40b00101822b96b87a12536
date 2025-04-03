@@ -1,0 +1,42 @@
+
+//Write a program that implements multiple interfaces in a single class
+
+package com.assignment;
+
+	
+		
+		// Define the first interface
+		interface Swimming {
+		    void swim();
+		}
+
+		// Define the second interface
+		interface Diving {
+		    void dive();
+		}
+
+		// Class implementing both interfaces
+		class Dolphin implements Swimming, Diving {
+		    @Override
+		    public void swim() {
+		        System.out.println("Dolphin is swimming in the ocean...");
+		    }
+
+		    @Override
+		    public void dive() {
+		        System.out.println("Dolphin is diving deep underwater...");
+		    }
+		}
+
+		// Main class
+		public class MultipleInheritance {
+		    public static void main(String[] args) {
+		        Dolphin myDolphin = new Dolphin();
+		        myDolphin.swim(); // Calls Swimming method
+		        myDolphin.dive(); // Calls Diving method
+		    }
+		}
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package com.oops;
+
+class student1
+{
+	int sid;
+	String sname, city;
+	public void setStudentData()
+	{
+		sid=1;
+		sname="Tisha";
+		city="Junagadh";
+	}	
+}
+class sport1
+{
+	String sname;
+	public void setSportData()
+	{
+		spname="Cricket";
+		
+	}
+	public void display()
+	{
+		System.out.println("sid is.."+sid);
+		System.out.println("sname is.."+sname);
+		System.out.println("city is.."+city);
+		System.out.println("spname is.."+spname);
+		
+	}
+}
+class result1 extends sport1
+{
+	
+}
+public class InheritanceDemo 
+{
+	public static void main(String[] args) 
+	{
+		
+	}
+}
